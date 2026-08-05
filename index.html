@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel Art Converter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1>Pixel Art Converter</h1>
+      <label class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <span>Dark mode</span>
+      </label>
+    </header>
+
+    <main class="layout">
+      <section class="panel controls">
+        <div class="field">
+          <label for="file-input">Image</label>
+          <input type="file" id="file-input" accept="image/*">
+        </div>
+
+        <div class="field">
+          <label for="detail-range">Detail (pixels across): <span id="detail-value">64</span></label>
+          <input type="range" id="detail-range" min="8" max="160" value="64">
+        </div>
+
+        <div class="field">
+          <label for="colors-range">Colors: <span id="colors-value">16</span></label>
+          <input type="range" id="colors-range" min="2" max="64" value="16">
+        </div>
+
+        <button id="download-btn" disabled>Download PNG</button>
+
+        <p class="hint" id="hint">Pick an image to get started.</p>
+      </section>
+
+      <section class="panel preview">
+        <canvas id="output-canvas"></canvas>
+      </section>
+    </main>
+  </div>
+
+  <script src="pixelart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
 
